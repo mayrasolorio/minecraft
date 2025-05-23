@@ -38,15 +38,10 @@ For example, I would run:
 
 ## Install Java (Corretto 21)and Prepare the Server Directory
 8. Run the following commands:  
-`cd /tmp`  
-`wget https://corretto.aws/downloads/latest/amazon-corretto-21-aarch64-linux-jdk.tar.gz`  
-`sudo mkdir -p usr/lib/jvm`
-`sudo tar -xzf amazon-corretto-21-aarch64-linux-jdk.tar.gz`  
-`sudo alternatives --install/usr/bin/java java /usr/lib/jvm/amazon-corretto-21.0*/bin/java 2000`  
-`sudo alternatives --config java`
-9. **Select Corretto 21** when prompted then verify:  
+`sudo dnf install -y java-21-amazon-corretto-headless`  
+9. Verify:  
 `java --version`  
-You should see OpenJDK 21
+You should see openjdk version "21.0.x" 2023-xx-xx LTS
 
 10. Run in your terminal:  
 `mkdir -p ~/minecraft-server`  
